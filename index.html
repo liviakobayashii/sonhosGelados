@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOrveteria Online</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- importando fonte corpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- importando fonte titulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <h1>Sorveteria Online</h1>
 
-    <h2>Nosso Cardápio</h2>
     <div id="container">
-        <ul id="listaSorvetes"></ul>
+        <div id="lista"> 
+            <h2>Nosso Cardápio</h2>
+
+            <ul id="listaSorvetes"></ul>
+        </div>
+        <div id="form">
+            <form id="formFiltrar">
+                <h2>Filtrar sorvetes pelo sabor</h2>
+                <input type="text" id="inputFiltrar" placeholder="Buscar...">
+                <input type="submit" value="Filtrar">
+            </form>
+        </div>
     </div>
 
-        <form id="formFiltrar">
-            <h3>Filtrar sorvetes pelo sabor</h3>
-            <input type="text" id="inputFiltrar" placeholder="Buscar...">
-            <input type="submit" value="Filtrar">
-        </form>
-
-<a href="adicionar.html">Adicionar sorvetes</a>
+<a href="adicionar.html" id="link">Adicionar sorvetes</a>
 
     <script src="./js/script.js"></script>
 </body>
