@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(121, 241, 241);
+    background-color: rgb(163, 245, 245);
     padding: 16px;
 }
 #container{
@@ -9,4 +9,22 @@ body{
 }
 li{
     font-weight: bold;
+}
+#funcionalidades {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    
+}
+#funcionalidades form{
+    background-color: rgb(255, 174, 248);
+    width: 70%;
+    text-align: center;
+    margin: 32px;
+    padding: 16px;
+}
+input{
+    border: 1px solid red;
+    width: 100%;
 }
