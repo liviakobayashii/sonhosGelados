@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOrveteria Online</title>
+    <title>Sonhos Gelados</title>
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- importando fonte corpo -->
@@ -18,25 +18,43 @@
     
 </head>
 <body>
-    <h1>Sorveteria Online</h1>
-
-    <div id="container">
-        <div id="lista"> 
-            <h2>Nosso Cardápio</h2>
-
-            <ul id="listaSorvetes"></ul>
+    <header>
+        <div id="navbar">
+            <h2>logo</h2>
+            <a href="adicionar.html">Adicionar sorvete</a>
+            <a href="carrinho.html">Meu carrinho</a>
         </div>
-        <div id="form">
-            <form id="formFiltrar">
-                <h2>Filtrar sorvetes pelo sabor</h2>
-                <input type="text" id="inputFiltrar" placeholder="Buscar...">
-                <input type="submit" value="Filtrar">
-            </form>
+
+        <div class="container header-content">
+            <div id="texto">
+                <h2>
+                    Personalize seu próprio <span id="sorvete">sorvete</span>
+                </h2>
+                <p>Escolha a casquinha e selecione os sabores das bolas de acordo com os sabores disponíveis</p>
+            </div>
+            <div id="imagem">
+                <img src="img/amora.png" alt="">
+            </div>
         </div>
-    </div>
-
-<a href="adicionar.html" id="link">Adicionar sorvetes</a>
-
+    </header>
+    <main>
+        <h1>Sonhos Gelados</h1>
+        <div id="container">
+            <div id="lista">
+                <h2>Nosso Cardápio</h2>
+                <ul id="listaSorvetes"></ul>
+            </div>
+            <div id="form">
+                <form id="formFiltrar">
+                    <h2>Filtrar sorvetes pelo sabor</h2>
+                    <input type="text" id="inputFiltrar" placeholder="Buscar...">
+                    <input type="submit" value="Filtrar">
+                </form>
+            </div>
+        </div>
+        
+        <a href="adicionar.html" id="link">Adicionar sorvetes</a>
+    </main>
     <script src="./js/script.js"></script>
 </body>
 </html>
