@@ -9,16 +9,21 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
 }
+#logo{
+    width: 100px;
+}
+#logo img{
+    width: 100%;
+    border-radius: 50%;
+}
+#navbar{
+    display: none;
+}
 .container{
     max-width: 1000px;
     width: 90%;
     margin: auto;
 }
-
-#navbar{
-    display: none;
-}
-
 #texto, #imagem{
     width: auto;
     margin: auto;
@@ -84,6 +89,18 @@ h1{
     font-family: 'Great Vibes', cursive;
     font-size: 3em;
     text-align: center;
+}
+
+
+#card{
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
+    width: 50%;
+}
+#imagem{
+    background-color: pink;
+    border-radius: 5% 5% 0% 0%;
 }
 /* #container{
     width: 50%;
