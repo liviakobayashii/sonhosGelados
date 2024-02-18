@@ -1,3 +1,11 @@
+:root{
+    --verdeClaro : #caffff;
+    --rosaEscuro: #ff0062;
+    --rosaClaro: #f86d84;
+    --marrom: #411a0e;
+    --creme: #f8e5bb;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -8,6 +16,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+
 }
 #logo{
     width: 100px;
@@ -30,7 +39,7 @@ body{
     box-sizing: border-box;
 }
 header{
-    background-image: linear-gradient(white, pink, rgb(248, 109, 132));
+    background-image: linear-gradient(white, pink, var(--rosaClaro));
     padding-bottom: 16px;
 }
 .header-content{
@@ -44,7 +53,7 @@ header #texto{
     padding: 8px;
 }
 header #texto p{
-    color: rgba(34, 34, 34, 0.904);
+    color: #222222e7;
     padding-bottom: 40px;
 }
 header #personalizar{
@@ -59,16 +68,17 @@ header #personalizar{
     max-width: 100%;
 }
 span#sorvete{
-    color: #ff0062;
+    color: var(--rosaEscuro);
 }
 main{
-    background-color: #caffff;
+    background-color: var(--verdeClaro);
     width: 100%;
-    padding: 1px;
-
+    margin: 0;
+    border: 1px solid var(--verdeClaro);
+    box-sizing: border-box;
 }
 #mobile{
-    background-color: white;
+    background-color: var(--creme);
     padding: 16px;
     display: flex;
     justify-content: space-around;
@@ -88,19 +98,39 @@ main{
 h1{
     font-family: 'Great Vibes', cursive;
     font-size: 3em;
+    color: var(--marrom);
     text-align: center;
 }
 
-
 #card{
-    background-color: white;
+    background-color: var(--creme);
+    width: 25%;
     border-radius: 5%;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
-    width: 50%;
 }
-#imagem{
-    background-color: pink;
+#card #imagem{
+    background-color: var(--creme);
     border-radius: 5% 5% 0% 0%;
+}
+#card #descricao{
+    color: var(--marrom);
+    padding: 0px 8px;
+}
+#descricao #nome{
+    font-weight: bold;
+    text-align: center;
+}
+#descricao #preco{
+    padding-bottom: 2px;
+    text-align: right;
+}
+footer{
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: var(--rosaClaro);
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
 }
 /* #container{
     width: 50%;
@@ -174,9 +204,9 @@ input[type=submit]:hover, #link:hover{
     box-sizing: border-box;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.452);
 }*/
-@media screen and (min-width:768px){
+@media screen and (min-width:68px){
     #navbar a:hover{
-        color: #00c3ff;
+        color: var(--marrom);
         transition: 0.2s;
     }
     header #personalizar:hover{
