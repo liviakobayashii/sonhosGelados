@@ -79,8 +79,6 @@ main{
     box-sizing: border-box;
 }
 #mobile{
-    background-color: var(--creme);
-    padding: 16px;
     display: flex;
     justify-content: space-around;
     font-size: 1.2em;
@@ -89,7 +87,7 @@ main{
 }
 #mobile .material-symbols-outlined{
     color: white;
-    background-image: linear-gradient( #cc2dfd,#d75df5,#ba82fa);
+    background-image: linear-gradient( var(--marrom), #7c4537, #91503c);
     padding: 10px;
     margin: 8px;
     font-size: 2em;
@@ -102,10 +100,13 @@ h1{
     color: var(--marrom);
     text-align: center;
 }
-
+#sorvetesAdicionados{
+    display: flex;
+}
 #card{
     background-color: var(--creme);
-    width: 25%;
+    margin: auto;
+    width: 200px;
     border-radius: 5%;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
 }
