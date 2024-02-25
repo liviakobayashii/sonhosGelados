@@ -53,43 +53,27 @@
     </header>
     <main>
         <section id="mobile">
-                <a href="sistema/pages/adicionar.html">
-                    <div class="material-symbols-outlined">heart_plus</div>
-                </a>
-                <a href="sistema/pages/carrinho.html">
-                    <div class="material-symbols-outlined">shopping_cart</div>
-                </a>
+            <a href="sistema/pages/adicionar.html">
+                <div class="material-symbols-outlined">heart_plus</div>
+            </a>
+            <a href="sistema/pages/carrinho.html">
+                <div class="material-symbols-outlined">shopping_cart</div>
+            </a>
         </section>
+    
+        <form id="formFiltrar">
+            <h1>Filtrar sorvetes pelo sabor</h1>
+            <input type="text" id="inputFiltrar" placeholder="Buscar...">
+            <input type="submit" value="Filtrar">
+
+            <section id="sorvetesFiltrados"></section>
+        </form>
+
         <h1>Nossos Sorvetes</h1>
 
-            <!-- <section id="sorvetesAdicionados">
-                <section id="card">
-                    <div id="imagem">
-                        <img src="sistema/img/flocos.jpg" alt="">
-                    </div>
-                    <div id="descricao">
-                        <div id="nome">
-                            <p>Flocos</p>
-                        </div>
-                        <div id="preco">
-                            <p>R$12,00</p>
-                        </div>
-                    </div>
-                        </section>
-            </section> -->
+        <section class="sorvetesAdicionados"></section>
 
-        <!-- 
-            <div id="form">
-                <form id="formFiltrar">
-                    <h2>Filtrar sorvetes pelo sabor</h2>
-                    <input type="text" id="inputFiltrar" placeholder="Buscar...">
-                    <input type="submit" value="Filtrar">
-                </form>
-            </div>
-        </div>
-        
-    </main> -->
-    <section class="sorvetesAdicionados"></section>
+    </main> 
 
     <script src="./sistema/js/script.js"></script>
 

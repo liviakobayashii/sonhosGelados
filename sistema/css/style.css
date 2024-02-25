@@ -31,11 +31,6 @@ body{
     display: none;
 }
 
-.container{
-    max-width: 1000px;
-    width: 90%;
-    margin: auto;
-}
 #texto, #imagem{
     width: auto;
     margin: auto;
@@ -103,9 +98,7 @@ h1{
     color: var(--marrom);
     text-align: center;
 }
-#sorvetesAdicionados{
-    display: flex;
-}
+
 .sorvetesAdicionados{
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +148,7 @@ footer{
     margin-top: 16px;
     text-align: center;
 }
-/* 
+
 #form {
     background-color: #ffc0cb;
     width: 100%;
@@ -165,28 +158,32 @@ footer{
     text-align: center;
 }
 
-input{
-    background-color: #ffeb91;
-    width: 70%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #fd748b;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.178);
-    box-sizing: border-box;
-}
-input[type=submit]{
-    color: white;
-    background-color: rgb(253, 116, 139);
-    font-weight: bold;
-}
-input[type=submit]:hover, #link:hover{
-    cursor: pointer;
-    filter:brightness(0.8);
-    transition: 0.2s ease;
-} 
+form{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-}*/
+}
+input{
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid var(--rosa);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #0000002d;
+}
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    background-color: var(--amarelo);
+}
+
+input[type=submit]{
+    color: var(--rosaEscuro);
+    background-image: linear-gradient(to bottom, var(--rosaClaro), var(--rosa));
+}
+
+
 @media screen and (min-width:768px){
     header #personalizar:hover{
         transition: 0.2s ease;
@@ -223,5 +220,15 @@ input[type=submit]:hover, #link:hover{
     #mobile{
         display: none;
     }
+
+    form{
+        max-width: 50%;
+    }
+    input[type=submit]:hover{
+        filter:brightness(0.8);
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
 
 }
