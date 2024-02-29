@@ -43,7 +43,7 @@ function mostrarSorveteNaPagina(arraySorvetes) {
 
         // colocado uma imagem no card
         const img = document.createElement("img")
-        img.src = '../img/backgroundSorvetePadrao.jpg'
+        img.src = './sistema/img/backgroundSorvetePadrao.jpg'
         img.alt = "Fundo padrão sorvete"
     
 
