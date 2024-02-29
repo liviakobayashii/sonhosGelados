@@ -6,7 +6,7 @@
     --verde : #b0f6f2;
     --verdeClaro: #e6faf9;
     --marrom: #411a0e;
-    --amarelo: #f8fcdc;
+    --amarelo: #fffbe0;
 }
 
 .material-symbols-outlined {
@@ -22,10 +22,17 @@ body{
 }
 #logo{
     width: 100px;
+
 }
 #logo img{
     width: 100%;
     border-radius: 50%;
+
+}
+.container{
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
 }
 #desktop{
     display: none;
@@ -110,6 +117,7 @@ h1{
     background-color: var(--amarelo);
     font-weight: bold;
     margin: auto;
+    margin-bottom: 16px;
     padding: 16px;
     width: 200px;
     width: 200px;
@@ -145,7 +153,7 @@ footer{
     font-weight: bold;
     background-color: var(--rosaClaro);
     padding: 16px;
-    margin-top: 16px;
+    padding-top: 16px;
     text-align: center;
 }
 
@@ -201,12 +209,11 @@ input[type=submit]{
     }
 
     #desktop{
-        max-width: 1000px;
-        margin: auto;
-        width: 90%;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
+
     
     #desktop a{
         padding: 8px;
