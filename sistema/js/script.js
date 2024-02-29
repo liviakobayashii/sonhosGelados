@@ -32,7 +32,6 @@ formFiltrar.addEventListener("submit", (e) =>{
 
 });
 
-
 function mostrarSorveteNaPagina(arraySorvetes) {
     sorvetesAdicionados.innerHTML = ''
 
@@ -41,7 +40,14 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         //mostrar os sorvetes adicionados
         const card = document.createElement("section")
         card.classList.add("card")
+
+        // colocado uma imagem no card
+        const img = document.createElement("img")
+        img.src = '../img/backgroundSorvetePadrao.jpg'
+        img.alt = "Fundo padrão sorvete"
     
+
+        const descricao = document.createElement("section")
         const nomeSorvete = document.createElement("p")
         nomeSorvete.textContent =  item.nome
         nomeSorvete.classList.add("nome")
@@ -52,17 +58,14 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         precoSorvete.textContent = "Preço: R$ " + preco
         precoSorvete.classList.add("preco")
     
-        card.appendChild(nomeSorvete)
-        card.appendChild(precoSorvete)
+        card.appendChild(img)
+        card.appendChild(descricao)
+        descricao.appendChild(nomeSorvete)
+        descricao.appendChild(precoSorvete)
     
         //adiciona o card à section sorvetesAdicionados
         sorvetesAdicionados.appendChild(card)
     });
 }
-
-
-//adicionar sorvetes
-
-
 
 
