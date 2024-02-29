@@ -42,12 +42,17 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         card.classList.add("card")
 
         // colocado uma imagem no card
+        const imagem = document.createElement("div")
+        imagem.classList.add("imagem")
+
+
         const img = document.createElement("img")
         img.src = './sistema/img/backgroundSorvetePadrao.jpg'
         img.alt = "Fundo padrão sorvete"
     
 
-        const descricao = document.createElement("section")
+        const descricao = document.createElement("div")
+        descricao.classList.add("descricao")
         const nomeSorvete = document.createElement("p")
         nomeSorvete.textContent =  item.nome
         nomeSorvete.classList.add("nome")
@@ -58,7 +63,8 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         precoSorvete.textContent = "Preço: R$ " + preco
         precoSorvete.classList.add("preco")
     
-        card.appendChild(img)
+        card.appendChild(imagem)
+        imagem.appendChild(img)
         card.appendChild(descricao)
         descricao.appendChild(nomeSorvete)
         descricao.appendChild(precoSorvete)

@@ -118,7 +118,6 @@ h1{
     font-weight: bold;
     margin: auto;
     margin-bottom: 16px;
-    padding: 32px;
     width: 200px;
     width: 200px;
     height: 200px;
@@ -127,30 +126,20 @@ h1{
 
 }
 
-/* .card #imagem{
-    background-color: var(--creme);
-    border-radius: 5%;
-}
-.card img{
-    border-radius: 5%;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.329); */
-
-/* } */
-.card img{
+.card .imagem{
+    width: 100%;
     height: 50%;
+    border-radius: 5%;
+    overflow: hidden;
 }
-.card #descricao{
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card .descricao{
     color: var(--marrom);
     padding: 0px 8px;
     height: 50%;
-}
-.descricao #nome{
-    font-weight: bold;
-    text-align: center;
-}
-.descricao #preco{
-    padding-bottom: 2px;
-    text-align: right;
 }
 
 #form {
