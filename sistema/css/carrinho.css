@@ -1,0 +1,9 @@
+table {
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    /* border-collapse: collapse; */
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid red;
+  }

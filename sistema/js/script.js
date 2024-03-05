@@ -62,12 +62,17 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         const precoSorvete = document.createElement("p")
         precoSorvete.textContent = "Preço: R$ " + preco
         precoSorvete.classList.add("preco")
+
+        const buttonCarrinho = document.createElement("button")
+        buttonCarrinho.className = "material-symbols-outlined"
+        buttonCarrinho.textContent = "shopping_cart"
     
         card.appendChild(imagem)
         imagem.appendChild(img)
         card.appendChild(descricao)
         descricao.appendChild(nomeSorvete)
         descricao.appendChild(precoSorvete)
+        descricao.appendChild(buttonCarrinho)
     
         //adiciona o card à section sorvetesAdicionados
         sorvetesAdicionados.appendChild(card)
