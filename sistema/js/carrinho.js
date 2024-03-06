@@ -1,11 +1,13 @@
+const tabela = document.querySelector("#tabela")
+
 const getCarrinho = () =>JSON.parse(localStorage.getItem('@sonhosGelados:carrinho')) || []
 const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrinho', JSON.stringify(dadosCarrinho))
 
-const carrinho = document.querySelector("#carrinho")
-const buttonCarrinho = (".buttoncarrinho")
+// const carrinho = document.querySelector("#carrinho")
+const buttonCarrinho = document.querySelector(".buttonCarrinho")
 
-buttonCarrinho = onclick("addCarrinho")
-const addCarrinho = id => {
+buttonCarrinho.onclick = addCarrinho() 
+const addCarrinho = (id) => {
     const carrinho = getCarrinho()
 
     if(carrinho.length > 0){
@@ -23,8 +25,22 @@ const addCarrinho = id => {
         carrinho.push({id:id, qtd:1})
     }
     setCarrinho(carrinho)
-}
 
+    carrinho.forEach(item => {
+        const th = document.createElement("th")
+        const tdNome = document.createElement("td")
+        const tdQtd = document.createElement("td")
+        th.appendChild(tdNome)
+        th.appendChild(tdQtd)
+    
+        tdNome.textContent = item.nome
+        tdQtd.textContent = item.qtd
+
+        tabela.appendChild(th)
+    });
+    
+    
+}
 // carrinho.addEventListener('onclick', (e)=>{
 //     e.preventDefault()
 
