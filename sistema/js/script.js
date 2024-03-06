@@ -64,8 +64,10 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         precoSorvete.classList.add("preco")
 
         const buttonCarrinho = document.createElement("button")
-        buttonCarrinho.className = "material-symbols-outlined"
+        buttonCarrinho.classList.add = "material-symbols-outlined"
+        buttonCarrinho.classList.add= "buttonCarrinho"
         buttonCarrinho.textContent = "shopping_cart"
+
     
         card.appendChild(imagem)
         imagem.appendChild(img)
