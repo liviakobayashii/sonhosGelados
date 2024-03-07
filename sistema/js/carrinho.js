@@ -5,42 +5,43 @@ const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrin
 
 // const carrinho = document.querySelector("#carrinho")
 const buttonCarrinho = document.querySelector(".buttonCarrinho")
+console.log(buttonCarrinho)
+// buttonCarrinho.onclick = function(){console.log("oi")}
 
-buttonCarrinho.onclick = addCarrinho() 
-const addCarrinho = (id) => {
-    const carrinho = getCarrinho()
+// const addCarrinho = (id) => {
+//     const carrinho = getCarrinho()
 
-    if(carrinho.length > 0){
-        let modificado = false
+//     if(carrinho.length > 0){
+//         let modificado = false
         
-        carrinho.forEach(item => {
-            if(item.id === id){
-                item.qtd ++
-                modificado = true
-            }
-        });
-        !modificado && carrinho.push({id:id, qtd:1})
-    }
-    else{
-        carrinho.push({id:id, qtd:1})
-    }
-    setCarrinho(carrinho)
+//         carrinho.forEach(item => {
+//             if(item.id === id){
+//                 item.qtd ++
+//                 modificado = true
+//             }
+//         });
+//         !modificado && carrinho.push({id:id, qtd:1})
+//     }
+//     else{
+//         carrinho.push({id:id, qtd:1})
+//     }
+    // setCarrinho(carrinho)
 
-    carrinho.forEach(item => {
-        const th = document.createElement("th")
-        const tdNome = document.createElement("td")
-        const tdQtd = document.createElement("td")
-        th.appendChild(tdNome)
-        th.appendChild(tdQtd)
+    // carrinho.forEach(item => {
+    //     const th = document.createElement("th")
+    //     const tdNome = document.createElement("td")
+    //     const tdQtd = document.createElement("td")
+    //     th.appendChild(tdNome)
+    //     th.appendChild(tdQtd)
     
-        tdNome.textContent = item.nome
-        tdQtd.textContent = item.qtd
+    //     tdNome.textContent = item.nome
+    //     tdQtd.textContent = item.qtd
 
-        tabela.appendChild(th)
-    });
+    //     tabela.appendChild(th)
+    // });
     
     
-}
+// }
 // carrinho.addEventListener('onclick', (e)=>{
 //     e.preventDefault()
 

@@ -1,3 +1,4 @@
+
 let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
 
 const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
