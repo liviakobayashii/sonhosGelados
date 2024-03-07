@@ -27,8 +27,13 @@ formFiltrar.addEventListener("submit", (e) =>{
         mostrarSorveteNaPagina(saborSelecionado)
     }else{
         mostrarSorveteNaPagina(sorvetes)
+
+        const p = document.createElement("p")
+        p.className= "mensagemErro"
+        p.textContent = "Sorvete não encontrado!"
+       
         
-        alert("Sorvete não encontrado")
+        // alert("Sorvete não encontrado")
     }
 
 });
@@ -64,18 +69,22 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         precoSorvete.textContent = "Preço: R$ " + preco
         precoSorvete.classList.add("preco")
 
+        const bottom = document.createElement("div")
+        bottom.className = "bottom"
+
         const buttonCarrinho = document.createElement("button")
-        buttonCarrinho.classList.add = "material-symbols-outlined"
+        buttonCarrinho.className= "material-symbols-outlined"
         buttonCarrinho.classList.add= "buttonCarrinho"
         buttonCarrinho.textContent = "shopping_cart"
 
     
         card.appendChild(imagem)
         imagem.appendChild(img)
-        card.appendChild(descricao)
+        card.appendChild(bottom)
+        bottom.appendChild(descricao)
+        bottom.appendChild(buttonCarrinho)
         descricao.appendChild(nomeSorvete)
         descricao.appendChild(precoSorvete)
-        descricao.appendChild(buttonCarrinho)
     
         //adiciona o card à section sorvetesAdicionados
         sorvetesAdicionados.appendChild(card)
