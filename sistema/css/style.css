@@ -106,42 +106,6 @@ h1{
     text-align: center;
 }
 
-.sorvetesAdicionados{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-
-}
-.card{
-    color: var(--marrom);
-    background-color: var(--amarelo);
-    font-weight: bold;
-    margin: auto;
-    margin-bottom: 16px;
-    width: 200px;
-    width: 200px;
-    height: 200px;
-    border-radius: 5%;
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
-
-}
-
-.card .imagem{
-    width: 100%;
-    height: 50%;
-    border-radius: 5% 5% 0% 0%;
-    overflow: hidden;
-}
-.card img{
-    width: 100%;
-    height: auto;
-}
-.card .descricao{
-    color: var(--marrom);
-    padding: 0px 8px;
-    height: 50%;
-}
-
 #form {
     background-color: #ffc0cb;
     width: 100%;
@@ -177,6 +141,56 @@ input[type=submit]{
     background-image: linear-gradient(to bottom, var(--rosaClaro), var(--rosa));
 }
 
+.sorvetesAdicionados{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+.card{
+    color: var(--marrom);
+    background-color: var(--amarelo);
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 16px;
+    width: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
+  
+
+}
+
+.card .imagem{
+    width: 100%;
+    height: 50%;
+    border-radius: 5% 5% 0% 0%;
+    overflow: hidden;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card .bottom{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card .descricao{
+    color: var(--marrom);
+    padding: 0px 8px;
+    height: 50%;
+}
+
+.card .material-symbols-outlined{
+    color: var(--marrom);
+    background-color: var(--amarelo);
+    border: 0px;
+}
+/* .buttonCarrinho{
+    border: 1px solid blue;
+} */
 footer{
     font-size: 0.8em;
     font-weight: bold;
