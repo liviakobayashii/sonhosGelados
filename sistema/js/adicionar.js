@@ -12,32 +12,35 @@ formAdicionar.addEventListener("submit", (e) => {
 
     let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
 
-    sorvetes.push({nome:valorInputNome, preco: valorInputPreco, qtd : 0})
+    sorvetes.push({id: sorvetes.length + 1, nome:valorInputNome, preco: valorInputPreco, qtd : 0})
+
+    console.log(sorvetes)
+
 
     localStorage.setItem('@sorveteriaOnline:sorvetes', JSON.stringify(sorvetes))
  
-    $.ajax({
-        url: './sistema/js/adicionar.js',
-        type: 'POST',
-        data: { nome: valorInputNome, preco: valorInputPreco},
-        success: function() {
-            Toastify({
-                text: "Produto adicionado ao cardápio!",
-                duration: 3000,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                  background: "#97fc97",
-                  color:"#000000",
-                  border: '1px solid green'
-                },
-              }).showToast();
-        }
-    })
+    // $.ajax({
+    //     url: './sistema/js/adicionar.js',
+    //     type: 'POST',
+    //     data: { nome: valorInputNome, preco: valorInputPreco},
+    //     success: function() {
+    //         Toastify({
+    //             text: "Produto adicionado ao cardápio!",
+    //             duration: 3000,
+    //             close: true,
+    //             gravity: "top", // `top` or `bottom`
+    //             position: "right", // `left`, `center` or `right`
+    //             stopOnFocus: true, // Prevents dismissing of toast on hover
+    //             style: {
+    //               background: "#97fc97",
+    //               color:"#000000",
+    //               border: '1px solid green'
+    //             },
+    //           }).showToast();
+    //     }
+    // })
     
-    //limpar dados de entrada
+    // limpar dados de entrada
     inputNome.value = ""
     inputPreco.value = ""
 
