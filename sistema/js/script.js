@@ -73,8 +73,9 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         bottom.className = "bottom"
 
         const buttonCarrinho = document.createElement("button")
-        buttonCarrinho.className= "material-symbols-outlined"
-        buttonCarrinho.classList.add= "buttonCarrinho"
+        buttonCarrinho.className= "material-symbols-outlined "
+        buttonCarrinho.onclick = addCarrinho(id)
+   
         buttonCarrinho.textContent = "shopping_cart"
 
     
