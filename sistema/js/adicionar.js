@@ -12,7 +12,7 @@ formAdicionar.addEventListener("submit", (e) => {
 
     let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
 
-    sorvetes.push({id: sorvetes.length + 1, nome:valorInputNome, preco: valorInputPreco, qtd : 0})
+    sorvetes.push({id: sorvetes.length + 1, nome:valorInputNome, preco: valorInputPreco})
 
     console.log(sorvetes)
 
