@@ -1,3 +1,5 @@
+const getCarrinho = () =>JSON.parse(localStorage.getItem('@sonhosGelados:carrinho')) || []
+const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrinho', JSON.stringify(dadosCarrinho))
 
 let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
 
@@ -13,6 +15,9 @@ const ul = document.querySelector("#listaSorvetes")
 localStorage.setItem('@sorveteriaOnline:sorvetes', JSON.stringify(sorvetes))
 
 mostrarSorveteNaPagina(sorvetes)
+
+
+
 
 //filtrar sorvetes
 
@@ -74,7 +79,7 @@ function mostrarSorveteNaPagina(arraySorvetes) {
 
         const buttonCarrinho = document.createElement("button")
         buttonCarrinho.className= "material-symbols-outlined "
-        buttonCarrinho.onclick = addCarrinho(id)
+        buttonCarrinho.onclick = () => addCarrinho(item.id,item.nome, item.preco)
    
         buttonCarrinho.textContent = "shopping_cart"
 
@@ -92,4 +97,24 @@ function mostrarSorveteNaPagina(arraySorvetes) {
     });
 }
 
+const addCarrinho = (id, nome, preco) => {
+    const carrinho = getCarrinho()
+
+    if(carrinho.length > 0){
+        let modificado = false
+        
+        carrinho.forEach(item => {
+
+            if(item.id === id){
+                item.qtd ++
+                modificado = true
+            }
+        });
+        !modificado && carrinho.push({id:id, nome:nome, qtd:1, preco:preco})
+    }
+    else{
+        carrinho.push({id:id, nome:nome, qtd:1, preco:preco})
+    }
+    setCarrinho(carrinho)
+}
 
