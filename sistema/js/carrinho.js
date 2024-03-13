@@ -2,21 +2,28 @@ const getCarrinho = () =>JSON.parse(localStorage.getItem('@sonhosGelados:carrinh
 const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrinho', JSON.stringify(dadosCarrinho))
 
 const tabela = document.querySelector("#tabela")
-const divTabela = document.querySelector("#divTabela")
 const buttonCarrinho = document.querySelector(".buttonCarrinho")
 
 const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 
 const carrinho = getCarrinho()
 
-if(carrinho.length > 0){
+if (carrinho.length > 0) {
 
     let soma =0
 
-    carrinho.forEach(item => {
+    let mostrarNaPagina = `
+        <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <th>Deletar</th>
+        </tr>
+    ` 
 
-        divTabela.innerHTML = `
-            <tr>
+    carrinho.forEach(item => {
+        mostrarNaPagina += `
+            <tr class="trProdutos">
                 <td>${item.nome}</td>
                 <td>${item.qtd}</td>
                 <td>${real.format(item.preco * item.qtd)} 
@@ -25,17 +32,19 @@ if(carrinho.length > 0){
                     </small>
                 </td>
                 <td>Remover</td>
-            </tr>    
+            </tr>  
         `
+
         soma += item.qtd * item.preco
     })
+
+    tabela.innerHTML = mostrarNaPagina
+
     const trTotal = document.createElement("tr")
     trTotal.innerHTML = 
         `<td class="total" colspan="4" style="font-weight: bold;">Valor total: ${real.format(soma)}</td>`
         
-    tabela.appendChild(divTabela)
     tabela.appendChild(trTotal)
-
 }
 
 
