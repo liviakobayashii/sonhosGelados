@@ -19,26 +19,20 @@ formAdicionar.addEventListener("submit", (e) => {
 
     localStorage.setItem('@sorveteriaOnline:sorvetes', JSON.stringify(sorvetes))
  
-    // $.ajax({
-    //     url: './sistema/js/adicionar.js',
-    //     type: 'POST',
-    //     data: { nome: valorInputNome, preco: valorInputPreco},
-    //     success: function() {
-    //         Toastify({
-    //             text: "Produto adicionado ao cardápio!",
-    //             duration: 3000,
-    //             close: true,
-    //             gravity: "top", // `top` or `bottom`
-    //             position: "right", // `left`, `center` or `right`
-    //             stopOnFocus: true, // Prevents dismissing of toast on hover
-    //             style: {
-    //               background: "#97fc97",
-    //               color:"#000000",
-    //               border: '1px solid green'
-    //             },
-    //           }).showToast();
-    //     }
-    // })
+
+            Toastify({
+                text: "Produto adicionado ao cardápio!",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "#97fc97",
+                  color:"#000000",
+                  border: '1px solid green'
+                },
+              }).showToast();
     
     // limpar dados de entrada
     inputNome.value = ""
