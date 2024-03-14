@@ -5,6 +5,8 @@ let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) ||
 
 const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
 
+const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+
 // const formAdicionar = document.querySelector("#formAdicionar")
 const inputNome = document.querySelector("#inputNome")
 
@@ -68,10 +70,10 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         nomeSorvete.textContent =  item.nome
         nomeSorvete.classList.add("nome")
     
-        const preco = item.preco || '-'
+        const preco = real.format(item.preco) || '-'
     
         const precoSorvete = document.createElement("p")
-        precoSorvete.textContent = "Preço: R$ " + preco
+        precoSorvete.textContent = "Preço: " + preco
         precoSorvete.classList.add("preco")
 
         const bottom = document.createElement("div")
