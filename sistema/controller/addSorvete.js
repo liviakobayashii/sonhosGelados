@@ -10,14 +10,14 @@ formAdicionar.addEventListener("submit", (e) => {
     const valorInputNome = inputNome.value
     const valorInputPreco = inputPreco.value
 
-    let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
+    let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
 
     sorvetes.push({id: sorvetes.length + 1, nome:valorInputNome, preco: valorInputPreco})
 
     console.log(sorvetes)
 
 
-    localStorage.setItem('@sorveteriaOnline:sorvetes', JSON.stringify(sorvetes))
+    localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
  
 
             Toastify({

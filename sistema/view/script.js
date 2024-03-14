@@ -1,4 +1,4 @@
-let sorvetes = JSON.parse(localStorage.getItem('@sorveteriaOnline:sorvetes')) || []
+let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
 
 const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
 
