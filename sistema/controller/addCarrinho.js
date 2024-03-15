@@ -37,5 +37,3 @@ const addCarrinho = (id, nome, preco) => {
       }).showToast();
 
 }
-
-// location.reload()
