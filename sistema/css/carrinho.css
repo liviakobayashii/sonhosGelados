@@ -13,24 +13,20 @@
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 
 }
-
 body{
   color: var(--marrom);
   background-color: var(--verdeClaro);
   font-family: 'Montserrat', sans-serif;
-
 }
 #logo{
   width: 100px;
-
 }
 #logo img{
   width: 100%;
   margin-bottom: 16px;
   border-radius: 50%;
-
 }
 header a{
   color: var(--marrom);
@@ -40,25 +36,25 @@ h1{
   font-size: 2em;
   text-align: center;
 }
+div#container{
+  overflow-x: auto;
+}
 table {
   background-color: white;
   margin: auto;
   width: 90%;
   max-width: 700px;
-  /* border-collapse: collapse; */
   width: 90%;
   max-width: 700px;
   border: 1px solid var(--marrom);
   border-collapse: collapse;
   text-align: center;
-  }
- 
+}
 th{
   background-color: var(--rosaClaro);
   padding: 8px;
   border: 1px solid var(--marrom);
 }
-
 td{
   background-color: white;
   padding: 8px;
@@ -72,19 +68,20 @@ small{
 tr.total{
   background-color: white;
 }
-
+button{
+  color: var(--marrom);
+  border: 0px;
+}
 .carrinhoVazio{
   color: var(--marrom);
   font-weight: bold;
   padding: 8px;
   text-align: center;
 }
-
 footer{
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: bold;
   padding: 16px;
   margin-top: 16px;
   text-align: center;
 }
-

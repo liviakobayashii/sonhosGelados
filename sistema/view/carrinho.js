@@ -1,10 +1,9 @@
 const getCarrinho = () =>JSON.parse(localStorage.getItem('@sonhosGelados:carrinho')) || []
 const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrinho', JSON.stringify(dadosCarrinho))
 
+const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 const tabela = document.querySelector("#tabela")
 const buttonCarrinho = document.querySelector(".buttonCarrinho")
-
-const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 
 let carrinho = getCarrinho()
 
@@ -16,9 +15,7 @@ let mostrarNaPagina = `
         <th>Deletar</th>
     </tr>
 ` 
-
 if (carrinho.length > 0) {
-
     let soma =0
 
     carrinho.forEach(item => {
@@ -38,23 +35,20 @@ if (carrinho.length > 0) {
                 </td>
             </tr>  
         `
-
         soma += item.qtd * item.preco
     })
-
     tabela.innerHTML = mostrarNaPagina
 
     const trTotal = document.createElement("tr")
     trTotal.innerHTML = 
         `<td class="total" colspan="4" style="font-weight: bold;">Valor total: ${real.format(soma)}</td>`
-        
     tabela.appendChild(trTotal)
-}  else{
+
+} else{
     mostrarNaPagina += `
         <tr>
             <td class="carrinhoVazio" colspan="4">Carrinho Vazio!</td>
         </tr>`
     tabela.innerHTML = mostrarNaPagina
-
 }
 

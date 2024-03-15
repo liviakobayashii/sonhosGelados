@@ -1,4 +1,3 @@
-
 const remCarrinho = (id) => {
     carrinho.forEach(item => {
         // if(item.qtd > 1){
@@ -9,8 +8,6 @@ const remCarrinho = (id) => {
             setCarrinho(novoCarrinho)
         // }
     });
-
-
 location.reload()
 
 // Toastify({

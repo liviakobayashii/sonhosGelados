@@ -39,5 +39,4 @@ formAdicionar.addEventListener("submit", (e) => {
     // limpar dados de entrada
     inputNome.value = ""
     inputPreco.value = ""
-
 })

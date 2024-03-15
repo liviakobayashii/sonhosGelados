@@ -1,24 +1,17 @@
 let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
 
-const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
-
 const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
-
-// const formAdicionar = document.querySelector("#formAdicionar")
+const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
 const inputNome = document.querySelector("#inputNome")
-
 const formFiltrar = document.querySelector("#formFiltrar")
 const inputFiltrar = document.querySelector("#inputFiltrar")
-
 const ul = document.querySelector("#listaSorvetes")
 
 mostrarSorveteNaPagina(sorvetes)
 
 //filtrar sorvetes
-
 formFiltrar.addEventListener("submit", (e) =>{
     e.preventDefault()
-    
     let valor = inputFiltrar.value
 
     const saborSelecionado = sorvetes.filter((sorvete) => sorvete.nome == valor)
@@ -27,18 +20,13 @@ formFiltrar.addEventListener("submit", (e) =>{
         mostrarSorveteNaPagina(saborSelecionado)
     }else{
         mostrarSorveteNaPagina(sorvetes)
-
         const p = document.createElement("p")
         p.className= "mensagemErro"
         p.textContent = "Sorvete não encontrado!"
-       
     }
-
 });
-
 function mostrarSorveteNaPagina(arraySorvetes) {
     sorvetesAdicionados.innerHTML = ''
-
     arraySorvetes.forEach((item) => {
 
         //mostrar os sorvetes adicionados
@@ -48,12 +36,9 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         // colocado uma imagem no card
         const imagem = document.createElement("div")
         imagem.classList.add("imagem")
-
-
         const img = document.createElement("img")
         img.src = './sistema/img/backgroundSorvetePadrao.jpg'
         img.alt = "Fundo padrão sorvete"
-    
 
         const descricao = document.createElement("div")
         descricao.classList.add("descricao")
@@ -73,10 +58,8 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         const buttonCarrinho = document.createElement("button")
         buttonCarrinho.className= "material-symbols-outlined "
         buttonCarrinho.onclick = () => addCarrinho(item.id,item.nome, item.preco)
-   
         buttonCarrinho.textContent = "shopping_cart"
-
-    
+        
         card.appendChild(imagem)
         imagem.appendChild(img)
         card.appendChild(bottom)
