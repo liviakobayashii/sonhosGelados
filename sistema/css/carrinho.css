@@ -72,6 +72,9 @@ button{
   color: var(--marrom);
   border: 0px;
 }
+button:hover{
+  cursor: pointer;
+}
 .carrinhoVazio{
   color: var(--marrom);
   font-weight: bold;
