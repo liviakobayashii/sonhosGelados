@@ -26,9 +26,9 @@ const mostrarCarrinho = () => {
                 <tr class="trProdutos">
                     <td>${item.nome}</td>
                     <td>
-                        <button onclick = "alterarQtd(${item.id}, "-")">-</button>
+                        <button onclick="diminuirQtd(${item.id})">-</button>
                         ${item.qtd}
-                        <button onclick = "alterarQtd(${item.id}, "+")">+</button></td>
+                        <button onclick="aumentarQtd(${item.id})">+</button></td>
                     <td>${real.format(item.preco * item.qtd)} 
                         <small>
                             (${item.qtd}x ${real.format(item.preco)})
