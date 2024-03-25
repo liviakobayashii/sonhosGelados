@@ -19,27 +19,44 @@ formAdicionar.addEventListener("submit", (e) => {
       id += 1
     });
 
-    sorvetes.push({id:id, nome:valorInputNome, preco: valorInputPreco, img: valorInputImg})
+    if(valorInputNome && valorInputPreco && valorInputImg){
+      sorvetes.push({id:id, nome:valorInputNome, preco: valorInputPreco, img: valorInputImg})
 
-    console.log(sorvetes)
-    localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
- 
-    Toastify({
-        text: "Produto adicionado ao cardápio com sucesso!",
-        duration: 3000,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "#97fc97",
-          color:"#000000",
-          border: '1px solid green'
-        },
-      }).showToast();
+      console.log(sorvetes)
+      localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
+   
+      Toastify({
+          text: "Produto adicionado ao cardápio com sucesso!",
+          duration: 3000,
+          close: true,
+          gravity: "bottom", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#97fc97",
+            color:"#000000",
+            border: '1px solid green'
+          },
+        }).showToast();
 
-    // limpar dados de entrada
-    inputNome.value = ""
-    inputPreco.value = ""
-    inputImg.value = ""
+      }else{
+        Toastify({
+          text: "Favor preencher todos os campos!",
+          duration: 3000,
+          close: true,
+          gravity: "bottom", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#f09d9d",
+            color:"#000000",
+            border: '1px solid red'
+          },
+        }).showToast();
+      }
+
+      // limpar dados de entrada
+      inputNome.value = ""
+      inputPreco.value = ""
+      inputImg.value = ""
 })
