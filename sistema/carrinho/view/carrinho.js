@@ -26,7 +26,7 @@ const mostrarCarrinho = () => {
                 <tr class="trProdutos">
                     <td>${item.nome}</td>
                     <td>
-                        <button onclick="diminuirQtd(${item.id})">-</button>
+                        <button onclick="diminuirQtd(${item.id})" class="${item.qtd === 1 ? 'disabled' : ''}">-</button>
                         ${item.qtd}
                         <button onclick="aumentarQtd(${item.id})">+</button></td>
                     <td>${real.format(item.preco * item.qtd)} 
@@ -42,6 +42,7 @@ const mostrarCarrinho = () => {
                 </tr>  
             `
             soma += item.qtd * item.preco
+
         })
 
         tabela.innerHTML = mostrarNaPagina

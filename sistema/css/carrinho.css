@@ -75,6 +75,9 @@ button{
 button:hover{
   cursor: pointer;
 }
+.disabled{
+  cursor: not-allowed !important;
+}
 .carrinhoVazio{
   color: var(--marrom);
   font-weight: bold;
