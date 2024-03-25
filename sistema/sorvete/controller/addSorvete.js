@@ -2,6 +2,7 @@
 const formAdicionar = document.querySelector("#formAdicionar")
 const inputNome = document.querySelector("#inputNome")
 const inputPreco = document.querySelector('#inputPreco')
+const inputImg = document.querySelector('#inputImg')
 const  sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
 
 formAdicionar.addEventListener("submit", (e) => {
@@ -9,6 +10,7 @@ formAdicionar.addEventListener("submit", (e) => {
     
     const valorInputNome = inputNome.value
     const valorInputPreco = inputPreco.value
+    const valorInputImg = inputImg.value
 
     let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
 
@@ -17,7 +19,7 @@ formAdicionar.addEventListener("submit", (e) => {
       id += 1
     });
 
-    sorvetes.push({id:id, nome:valorInputNome, preco: valorInputPreco})
+    sorvetes.push({id:id, nome:valorInputNome, preco: valorInputPreco, img: valorInputImg})
 
     console.log(sorvetes)
     localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
@@ -39,4 +41,5 @@ formAdicionar.addEventListener("submit", (e) => {
     // limpar dados de entrada
     inputNome.value = ""
     inputPreco.value = ""
+    inputImg.value = ""
 })

@@ -37,8 +37,8 @@ function mostrarSorveteNaPagina(arraySorvetes) {
         const imagem = document.createElement("div")
         imagem.classList.add("imagem")
         const img = document.createElement("img")
-        img.src = './sistema/img/backgroundSorvetePadrao.jpg'
-        img.alt = "Fundo padrão sorvete"
+        img.src = `${item.img ? item.img : './sistema/img/backgroundSorvetePadrao.jpg'}`
+        img.alt = `Sorvete de ${item.nome}`
 
         const descricao = document.createElement("div")
         descricao.classList.add("descricao")
