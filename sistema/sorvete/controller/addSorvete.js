@@ -22,7 +22,6 @@ formAdicionar.addEventListener("submit", (e) => {
     if(valorInputNome && valorInputPreco && valorInputImg){
       sorvetes.push({id:id, nome:valorInputNome, preco: valorInputPreco, img: valorInputImg})
 
-      console.log(sorvetes)
       localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
    
       Toastify({
