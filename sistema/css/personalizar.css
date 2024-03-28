@@ -1,0 +1,58 @@
+:root{
+    --rosaEscuro: #ff0062;
+    --rosa: #f3a8c2;
+    --rosaClaro: #f6d1de;
+    --verdeEscuro: #75f9f2;
+    --verde : #b0f6f2;
+    --verdeClaro: #e6faf9;
+    --marrom: #411a0e;
+    --amarelo: #fffbe0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#conteudo{
+    display: flex;
+}
+#left{
+    background-color: pink;
+    width: 65%;
+}
+#right{
+    background-color: aqua;
+    width: 35%;
+}
+section#primeiroSabor, section#segundoSabor{
+    margin: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.card{
+    color: var(--marrom);
+    background-color: var(--amarelo);
+    font-weight: bold;
+    /* margin: auto; */
+    margin-bottom: 16px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24);
+}
+.card .imagem{
+    width: 100%;
+    height: 50%;
+    border-radius: 5% 5% 0% 0%;
+    overflow: hidden;
+}
+.imagem img{
+    width: 100%;
+    height: auto;
+}
+
+.card .descricao{
+    color: var(--marrom);
+    padding: 0px 8px;
+    height: 50%;
+}
+

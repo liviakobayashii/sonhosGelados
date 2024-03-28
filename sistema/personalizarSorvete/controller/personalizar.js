@@ -1,21 +1,47 @@
-let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
-localStorage.setItem('@sonhosGelados:sorvetes', JSON.stringify(sorvetes))
+let sorvetes = JSON.parse(localStorage.getItem("@sonhosGelados:sorvetes")) || [];
+localStorage.setItem("@sonhosGelados:sorvetes", JSON.stringify(sorvetes));
 
-const select = document.querySelector("#select")
+const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 
-if(sorvetes){
+if (sorvetes) {
+    primeiroSabor = document.querySelector("#primeiroSabor")
+    segundoSabor = document.querySelector("#segundoSabor")
+
+    //lado 1
+    
+    //primeiro sabor do sorvete
     sorvetes.forEach(item => {
-    const option = ''
-    option.innerHTML = `
-    <option value="${item.nome}">${item.nome}</option>
-    `
-    select.appendChild(option)
+        primeiroSabor.innerHTML += `
+        <div class="card">
+            <div class="imagem">
+                <img src="${item.img ? item.img : '../../img/backgroundSorvetePadrao.jpg'}" alt="Sorvete de ${item.nome}">
+            </div>
+            <div class="descricao">
+                <p class="nome">${item.nome}</p>
+                <p class="preco">Preço: ${real.format(item.preco) || '-'}</p>
+            </div>
+        </div>
+        `
+    });
 
-});
+    //segundo sabor do sorvete
+    sorvetes.forEach(item => {
+        segundoSabor.innerHTML += `
+        <div class="card">
+            <div class="imagem">
+                <img src="${item.img ? item.img : '../../img/backgroundSorvetePadrao.jpg'}" alt="Sorvete de ${item.nome}">
+            </div>
+            <div class="descricao">
+                <p class="nome">${item.nome}</p>
+                <p class="preco">Preço: ${real.format(item.preco) || '-'}</p>
+            </div>
+        </div>
+        `
+    });
+    //cobertura do sorvete
+    //casquinha do sorvete
+
+    //lado2
+
 }
-// const select = `
-//     <select id="select"></select>
-//     <option value="1"></option>
-
-// `
-// select.innerHTML
+    
