@@ -1,4 +1,6 @@
 let sorvetes = JSON.parse(localStorage.getItem('@sonhosGelados:sorvetes')) || []
+let coberturas = JSON.parse(localStorage.getItem('@sonhosGelados:coberturas')) || []
+let casquinhas = JSON.parse(localStorage.getItem('@sonhosGelados:casquinhas'))
 
 const real = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 const sorvetesAdicionados = document.querySelector(".sorvetesAdicionados")
