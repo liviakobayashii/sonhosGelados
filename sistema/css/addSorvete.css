@@ -40,12 +40,16 @@ form{
     flex-direction: column;
     gap: 8px;
 }
-input{
+input, select{
+    color: var(--marrom);
     padding: 10px;
     margin-bottom: 8px;
     border: 1px solid var(--rosa);
     border-radius: 5px;
     box-shadow: 1px 1px 2px #0000002d;
+}
+select:first-child{
+    color:gray
 }
 input[type=submit]{
     color: var(--rosaEscuro);
