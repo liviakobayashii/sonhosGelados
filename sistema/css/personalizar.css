@@ -14,15 +14,14 @@ body{
 #conteudo{
     display: flex;
 }
+main{
+    background-color: var(--rosa);
+}
 #left{
-    background-color: pink;
     width: 65%;
 }
-#right{
-    background-color: aqua;
-    width: 35%;
-}
-section#primeiroSabor, section#segundoSabor{
+
+section#primeiroSabor, section#segundoSabor, section#cobertura{
     margin: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -56,3 +55,13 @@ section#primeiroSabor, section#segundoSabor{
     height: 50%;
 }
 
+/* right */
+#right{
+    width: 35%;
+    padding: 40px;
+}
+.container{
+    background-color:var(--verdeClaro);
+    height: 100%;
+    border-radius: 8px;
+}
