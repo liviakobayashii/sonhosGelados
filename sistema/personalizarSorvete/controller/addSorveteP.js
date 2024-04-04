@@ -6,7 +6,7 @@ const personalizacaoPadrao = {
 }
 
 const getSorvetePersonalizado = () => JSON.parse(localStorage.getItem('@sonhosGelados:sorvetePersonalizado')) || personalizacaoPadrao
-const setSorvetePersonalizado = dadosSorvete => localStorage.setItem('@sonhosGelados:sorvetePersonalizado', JSON.stringify(dadosSorvete))
+const setSorvetePersonalizado = dadosSorvetePersonalizado => localStorage.setItem('@sonhosGelados:sorvetePersonalizado', JSON.stringify(dadosSorvetePersonalizado))
 
 const addPersonalizacao = (chave, valor) => {
     const sorvetePersonalizado = getSorvetePersonalizado()
@@ -14,27 +14,33 @@ const addPersonalizacao = (chave, valor) => {
     sorvetePersonalizado[chave] = valor
     // console.log(sorvetePersonalizado)
 
+    setSorvetePersonalizado(sorvetePersonalizado)
+
+    mostrarSorvetesPersonalizados()
+}
+
+//lado direito
+
+const mostrarSorvetesPersonalizados = () => {
+    const sorvetePersonalizado = getSorvetePersonalizado()
+    console.log(sorvetePersonalizado)
+
     const right = document.querySelector("#right")
 
     right.innerHTML = `
-        <div class="container">
-            <h3>Sabor 1<h3>
-            <p>${sorvetePersonalizado.primeiroSabor}</p>
-            <h3>Sabor 2<h3>
-            <h3>Cobertura<h3>
-            <h3>Casquinha<h3>
+        <div id="container">
+            <h3>Sabor 1</h3>
+            <p>${sorvetePersonalizado.primeiroSabor ? sorvetePersonalizado.primeiroSabor.nome : "Sabor não selecionado"}</p>
+            <h3>Sabor 2</h3>
+            <p>${sorvetePersonalizado.segundoSabor ? sorvetePersonalizado.segundoSabor.nome : "Sabor não selecionado"}</p>
+            <h3>Cobertura</h3>
+            <p>${sorvetePersonalizado.cobertura ? sorvetePersonalizado.cobertura.nome : "Cobertura não selecionada"}</p>
+            <h3>Casquinha</h3>
+            <p>${sorvetePersonalizado.casquinha ? sorvetePersonalizado.casquinha.nome : "Casquinha não selecionada"}</p>
+
         </div>
     `
+
 }
 
-
-
-// {
-//     primeiroSabor: 'Chocolate',
-//     segundoSabor: null,
-//     cobertura: 'Morango',
-//     tipo: 'Casquinha',
-// }
-
-//lado2
-
+mostrarSorvetesPersonalizados()

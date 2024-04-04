@@ -1,10 +1,7 @@
-const mostrarSorvetesPersonalizados = () => {
-    const sorvetes =
-        JSON.parse(localStorage.getItem("@sonhosGelados:sorvetes")) || [];
-    const coberturas =
-        JSON.parse(localStorage.getItem("@sonhosGelados:coberturas")) || [];
-    const casquinhas =
-        JSON.parse(localStorage.getItem("@sonhosGelados:casquinhas")) || [];
+const mostrarOpcoes = () => {
+    const sorvetes = JSON.parse(localStorage.getItem("@sonhosGelados:sorvetes")) || [];
+    const coberturas = JSON.parse(localStorage.getItem("@sonhosGelados:coberturas")) || [];
+    const casquinhas = JSON.parse(localStorage.getItem("@sonhosGelados:casquinhas")) || [];
 
     const real = Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -30,12 +27,7 @@ const mostrarSorvetesPersonalizados = () => {
                             : "../../img/backgroundSorvetePadrao.jpg"
                     }" alt="Sorvete de ${item.nome}">
                 </div>
-                <div class="descricao">
-                    <p class="nome">${item.nome}</p>
-                    <p class="preco">Preço: ${
-                        real.format(item.preco) || "-"
-                    }</p>
-                </div>
+                <p class="nome">${item.nome}</p>
             </div>
             `;
         });
@@ -58,9 +50,6 @@ const mostrarSorvetesPersonalizados = () => {
                         </div>
                         <div class="descricao">
                             <p class="nome">${item.nome}</p>
-                            <p class="preco">Preço: ${
-                                real.format(item.preco) || "-"
-                            }</p>
                         </div>
                     </div>
                     `;
@@ -85,9 +74,6 @@ const mostrarSorvetesPersonalizados = () => {
                         </div>
                         <div class="descricao">
                             <p class="nome">${item.nome}</p>
-                            <p class="preco">Preço: ${
-                                real.format(item.preco) || "-"
-                            }</p>
                         </div>
                     </div>
                     `;
@@ -112,9 +98,6 @@ const mostrarSorvetesPersonalizados = () => {
                         </div>
                         <div class="descricao">
                             <p class="nome">${item.nome}</p>
-                            <p class="preco">Preço: ${
-                                real.format(item.preco) || "-"
-                            }</p>
                         </div>
                     </div>
                     `;
@@ -123,4 +106,5 @@ const mostrarSorvetesPersonalizados = () => {
     }
 };
 
-mostrarSorvetesPersonalizados();
+mostrarOpcoes();
+
