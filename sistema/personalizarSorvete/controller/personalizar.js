@@ -48,9 +48,7 @@ const mostrarOpcoes = () => {
                                     : "../../img/backgroundSorvetePadrao.jpg"
                             }" alt="Sorvete de ${item.nome}">
                         </div>
-                        <div class="descricao">
-                            <p class="nome">${item.nome}</p>
-                        </div>
+                        <p class="nome">${item.nome}</p>
                     </div>
                     `;
         });
@@ -72,9 +70,7 @@ const mostrarOpcoes = () => {
                                     : "../../img/backgroundSorvetePadrao.jpg"
                             }" alt="Cobertura de ${item.nome}">
                         </div>
-                        <div class="descricao">
-                            <p class="nome">${item.nome}</p>
-                        </div>
+                        <p class="nome">${item.nome}</p>
                     </div>
                     `;
         });
@@ -96,9 +92,7 @@ const mostrarOpcoes = () => {
                                     : "../../img/backgroundSorvetePadrao.jpg"
                             }" alt="Casquinha de ${item.nome}">
                         </div>
-                        <div class="descricao">
-                            <p class="nome">${item.nome}</p>
-                        </div>
+                        <p class="nome">${item.nome}</p>
                     </div>
                     `;
         });
