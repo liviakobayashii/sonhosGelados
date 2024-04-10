@@ -81,16 +81,28 @@ section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinh
 #container{
     background-color:var(--verdeClaro);
     height: auto;
-    padding: 8px 128px 8px 8px;
     border-radius: 8px;
     position: fixed;
-    top: 80px;
     bottom: 80px;
     right: 32px;
 }
 #container h3{
     color: var(--rosaEscuro);
+    padding: 8px 128px 0px 8px;
+
 }
 #container p{
     color: var(--marrom);
+    padding: 0px 128px 0px 8px;
+
+}
+button[type="submit"]{
+    color: white;
+    background-color: var(--marrom);
+    font-size: 1.2em;
+    width: 100%;
+    padding: 16px;
+    margin:0px ;
+    border: 0px;
+    border-radius: 0px 0px 8px 8px;
 }
