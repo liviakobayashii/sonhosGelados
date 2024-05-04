@@ -12,7 +12,6 @@ const addPersonalizacao = (chave, valor) => {
     const sorvetePersonalizado = getSorvetePersonalizado()
 
     sorvetePersonalizado[chave] = valor
-    // console.log(sorvetePersonalizado)
 
     setSorvetePersonalizado(sorvetePersonalizado)
 
@@ -23,7 +22,6 @@ const addPersonalizacao = (chave, valor) => {
 
 const mostrarSorvetesPersonalizados = () => {
     const sorvetePersonalizado = getSorvetePersonalizado()
-    console.log(sorvetePersonalizado)
 
     const right = document.querySelector("#right")
 
