@@ -35,7 +35,7 @@ const addCarrinho = (id, nome, preco) => {
 }
 
 
-const addCarrinhoPersonalizado = () => {
+const addCarrinhoPersonalizado = (id, nome, preco) => {
     const carrinho = getCarrinho()
     const sorvetePersonalizado = getSorvetePersonalizado()
 
@@ -45,7 +45,8 @@ const addCarrinhoPersonalizado = () => {
         id: [primeiroSabor.id, segundoSabor.id, cobertura.id, casquinha.id].join(''),
         nome: 'Sorvete personalizado',
         descricao: `${primeiroSabor.nome}, ${segundoSabor.nome}, cobertura de ${cobertura.nome} e casquinha de ${casquinha.nome}`,
-        preco: parseFloat(primeiroSabor.preco) + parseFloat(segundoSabor.preco) + parseFloat(cobertura.preco) + parseFloat(casquinha.preco)
+        preco: parseFloat(primeiroSabor.preco) + parseFloat(segundoSabor.preco) + parseFloat(cobertura.preco) + parseFloat(casquinha.preco),
+        qtd:1
     }
 
     const existeUmSorveteComOMesmoID = carrinho.some(item => item.id === novoSorvete.id)
@@ -61,8 +62,6 @@ const addCarrinhoPersonalizado = () => {
     }
 
     setCarrinho(carrinho)
-
-    console.log(carrinho)
 
     Toastify({
         text: "Produto adicionado ao carrinho com sucesso!",
