@@ -1,19 +1,9 @@
 const remCarrinho = (id) => {
     const carrinho = getCarrinho()
 
-    carrinho.forEach(item => {
-        if(item.id === id){
-            const novoCarrinho = carrinho.filter(item => item.id !== id)
-            setCarrinho(novoCarrinho)
-        }
-        // if( item.qtd > 1){
-        //     let qtd = Number(item.qtd)
-        //     qtd -=1 
-        // }else if(){
-        //     let novoCarrinho = carrinho.filter(item =>item.id !== id)
-        //     setCarrinho(novoCarrinho)
-        // }
-    });
+
+    const novoCarrinho = carrinho.filter(item => item.id !== id)
+    setCarrinho(novoCarrinho)        
 
     mostrarCarrinho()
 

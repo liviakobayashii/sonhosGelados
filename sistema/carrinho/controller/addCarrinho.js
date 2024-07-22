@@ -6,6 +6,11 @@ const setCarrinho = dadosCarrinho => localStorage.setItem('@sonhosGelados:carrin
 const addCarrinho = (id, nome, preco) => {
     const carrinho = getCarrinho()
 
+    // const novoSorvete = 
+
+    const existeUmSorveteComOMesmoID = carrinho.some(item => item.id === id)
+
+
     if (existeUmSorveteComOMesmoID) {
         carrinho.forEach(item => {
             if (item.id === id) {
@@ -35,14 +40,14 @@ const addCarrinho = (id, nome, preco) => {
 }
 
 
-const addCarrinhoPersonalizado = (id, nome, preco) => {
+const addCarrinhoPersonalizado = () => {
     const carrinho = getCarrinho()
     const sorvetePersonalizado = getSorvetePersonalizado()
 
     const { primeiroSabor, segundoSabor, cobertura, casquinha } = sorvetePersonalizado
 
     const novoSorvete = {
-        id: [primeiroSabor.id, segundoSabor.id, cobertura.id, casquinha.id].join(''),
+        id: parseInt([primeiroSabor.id, segundoSabor.id, cobertura.id, casquinha.id].join('')),
         nome: 'Sorvete personalizado',
         descricao: `${primeiroSabor.nome}, ${segundoSabor.nome}, cobertura de ${cobertura.nome} e casquinha de ${casquinha.nome}`,
         preco: parseFloat(primeiroSabor.preco) + parseFloat(segundoSabor.preco) + parseFloat(cobertura.preco) + parseFloat(casquinha.preco),

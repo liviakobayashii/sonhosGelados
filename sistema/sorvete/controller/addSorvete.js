@@ -40,8 +40,7 @@ formAdicionar.addEventListener("submit", (e) => {
           localStorage.setItem('@sonhosGelados:casquinhas', JSON.stringify(casquinhas))
           break
       }
-
-      console.log(coberturas)
+      
       Toastify({
           text: "Produto adicionado ao cardápio com sucesso!",
           duration: 3000,
