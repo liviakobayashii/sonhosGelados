@@ -15,9 +15,9 @@ Toastify({
   position: "right", // `left`, `center` or `right`
   stopOnFocus: true, // Prevents dismissing of toast on hover
   style: {
-    background: "#ffb4b4",
+    background: "#97fc97",
     color:"#000000",
-    border: '1px solid red'
-  },
+    border: '1px solid green'
+},
 }).showToast();
 }

@@ -10,8 +10,30 @@
 }
 
 body{
+    background-color: var(--rosaClaro);
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+}
+
+header {
+    padding: 16px;
+}
+
+header img{
+    width: 100px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+}
+.material-symbols-outlined {
+    padding: 16px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+span{
+    color: var(--marrom);
 }
 h1{
     font-family: 'Great Vibes', cursive;
@@ -32,9 +54,7 @@ h2 span{
 #conteudo{
     display: flex;
 }
-main{
-    background-color: var(--rosaClaro);
-}
+
 #left{
     width: 65%;
 }
@@ -54,6 +74,10 @@ section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinh
     height: 150px;
     border-radius: 5%;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.014);
+}
+
+.card:hover {
+    cursor: pointer;
 }
 .card .imagem{
     width: 100%;
@@ -105,4 +129,17 @@ button[type="submit"]{
     margin:0px ;
     border: 0px;
     border-radius: 0px 0px 8px 8px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+footer{
+    color: var(--marrom);
+    font-weight: bold;
+    font-size: 0.7em;
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
 }
