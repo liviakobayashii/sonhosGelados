@@ -37,7 +37,7 @@ span{
 }
 h1{
     font-family: 'Great Vibes', cursive;
-    font-size: 3em;
+    font-size: 5em;
     color: var(--marrom);
     margin: 0px;
     padding: 16px;
@@ -45,24 +45,26 @@ h1{
 }
 h2{
     color: var(--marrom);
-    margin: 32px 16px 0px;
+    margin: 64px 16px 8px;
+    font-size: 3em;
 }
 h2 span{
     color: #411a0ea9;
     font-size: 0.8em;
 }
-#conteudo{
-    display: flex;
-}
+/* #conteudo{ */
+    /* display: flex; */
+/* } */
 
 #left{
+    margin: auto;
     width: 65%;
 }
 
 section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinha{
-    margin: 16px;
+    /* margin: 16px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     gap: 16px;
 }
 .card{
@@ -70,15 +72,15 @@ section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinh
     background-color: var(--amarelo);
     font-weight: bold;
     margin-bottom: 16px;
-    width: 150px;
-    height: 150px;
+    /* width: 150px;
+    height: 150px; */
     border-radius: 5%;
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.014);
+    box-shadow: 2px 3px 4px rgba(46, 46, 46, 0.452);
 }
 
-.card:hover {
+/* .card:hover {
     cursor: pointer;
-}
+} */
 .card .imagem{
     width: 100%;
     height: 50%;
@@ -94,52 +96,61 @@ section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinh
     color: var(--marrom);
     padding:8px;
     height: 50%;
+    font-size: 2em;
     text-align: center;
 }
 
 /* right */
 #right{
-    width: 35%;
+    margin: auto;
+    /* width: 40%; */
+    width: 65%;
     padding: 40px;
 }
 #container{
     background-color:var(--verdeClaro);
+    padding: 16px;
     height: auto;
     border-radius: 8px;
-    position: fixed;
-    bottom: 80px;
-    right: 32px;
+    /* position: fixed; */
+    /* bottom: 80px;
+    right: 32px; */
+    box-shadow: 2px 3px 4px rgba(46, 46, 46, 0.452);
 }
 #container h3{
     color: var(--rosaEscuro);
     padding: 8px 128px 0px 8px;
+    font-size: 3em;
 
 }
 #container p{
     color: var(--marrom);
     padding: 0px 128px 0px 8px;
+    font-size: 3em;
 
 }
 button[type="submit"]{
     color: white;
     background-color: var(--marrom);
-    font-size: 1.2em;
+    font-size: 3em;
     width: 100%;
-    padding: 16px;
+    padding: 32px;
     margin:0px ;
     border: 0px;
-    border-radius: 0px 0px 8px 8px;
-}
+    border-radius: 8px;
 
-button[type="submit"]:hover {
-    cursor: pointer;
 }
 
 footer{
     color: var(--marrom);
     font-weight: bold;
-    font-size: 0.7em;
-    padding: 16px;
+    padding: 64px;
     margin-top: 16px;
     text-align: center;
+}
+
+@media screen and (min-width:830px) {
+    body {
+      background-color: red;
+    }
 }
