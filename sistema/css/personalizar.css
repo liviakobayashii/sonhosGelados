@@ -1,15 +1,15 @@
-:root{
+:root {
     --rosaEscuro: #ff0062;
     --rosa: #f3a8c2;
     --rosaClaro: #f6d1de;
     --verdeEscuro: #75f9f2;
-    --verde : #b0f6f2;
+    --verde: #b0f6f2;
     --verdeClaro: #e6faf9;
     --marrom: #411a0e;
     --amarelo: #fffbe0;
 }
 
-body{
+body {
     background-color: var(--rosaClaro);
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
@@ -19,138 +19,240 @@ header {
     padding: 16px;
 }
 
-header img{
+header img {
     width: 100px;
     margin-bottom: 16px;
     border-radius: 50%;
 }
+
 .material-symbols-outlined {
     padding: 16px;
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
-span{
+
+span {
     color: var(--marrom);
 }
-h1{
+
+h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 5em;
+    font-size: 3em;
     color: var(--marrom);
     margin: 0px;
     padding: 16px;
     text-align: center;
 }
-h2{
+
+h2 {
     color: var(--marrom);
-    margin: 64px 16px 8px;
-    font-size: 3em;
+    font-size: 1.5em;
 }
-h2 span{
+
+h2 span {
     color: #411a0ea9;
     font-size: 0.8em;
 }
-/* #conteudo{ */
-    /* display: flex; */
-/* } */
 
-#left{
+main {
+    width: 90%;
+    max-width: 1300px;
     margin: auto;
-    width: 65%;
 }
 
-section#primeiroSabor, section#segundoSabor, section#cobertura, section#casquinha{
-    /* margin: 16px;
-    display: flex;
-    flex-wrap: wrap; */
-    gap: 16px;
+
+
+#conteudo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
 }
-.card{
+
+#left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: var(--verdeClaro);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 4px rgba(46, 46, 46, 0.452);
+}
+
+
+.card {
     color: var(--marrom);
     background-color: var(--amarelo);
     font-weight: bold;
-    margin-bottom: 16px;
-    /* width: 150px;
-    height: 150px; */
     border-radius: 5%;
     box-shadow: 2px 3px 4px rgba(46, 46, 46, 0.452);
+    height: 150px;
+    width: 150px;
 }
 
 /* .card:hover {
     cursor: pointer;
-} */
-.card .imagem{
+    } */
+    .card .imagem {
     width: 100%;
-    height: 50%;
+    height: 60%;
     border-radius: 5% 5% 0% 0%;
     overflow: hidden;
 }
-.imagem img{
+
+.imagem img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-.card .nome{
+.card .nome {
     color: var(--marrom);
-    padding:8px;
-    height: 50%;
-    font-size: 2em;
+    padding: 8px;
+    font-size: 1em;
     text-align: center;
 }
 
-/* right */
-#right{
-    margin: auto;
-    /* width: 40%; */
-    width: 65%;
-    padding: 40px;
-}
-#container{
-    background-color:var(--verdeClaro);
+#container {
+    background-color: var(--verdeClaro);
     padding: 16px;
-    height: auto;
     border-radius: 8px;
-    /* position: fixed; */
-    /* bottom: 80px;
-    right: 32px; */
     box-shadow: 2px 3px 4px rgba(46, 46, 46, 0.452);
 }
-#container h3{
+
+#container h3 {
     color: var(--rosaEscuro);
     padding: 8px 128px 0px 8px;
-    font-size: 3em;
-
+    font-size: 1em;
+    width: 200px;
+    border: 1px solid red;
+    
 }
-#container p{
+
+#container p {
     color: var(--marrom);
     padding: 0px 128px 0px 8px;
-    font-size: 3em;
+    font-size: 1em;
 
+    
 }
-button[type="submit"]{
+
+button[type="submit"] {
     color: white;
     background-color: var(--marrom);
-    font-size: 3em;
+    font-size: 1em;
     width: 100%;
     padding: 32px;
-    margin:0px ;
+    margin: 0px;
     border: 0px;
     border-radius: 8px;
-
+    
 }
 
-footer{
+footer {
     color: var(--marrom);
+    font-size: 0.8em;
     font-weight: bold;
     padding: 64px;
     margin-top: 16px;
     text-align: center;
 }
 
-@media screen and (min-width:830px) {
-    body {
-      background-color: red;
+
+@media screen and (max-width: 375px) {
+    
+    #primeiroSabor, #segundoSabor, #cobertura, #casquinha{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+
+        gap: 1rem;
+        }
+        #conteudo {
+            grid-template-columns: 1fr;
+        }
+        .card {
+            margin: auto;
+        }
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 523px) {
+    #primeiroSabor,
+    #segundoSabor,
+    #cobertura,
+    #casquinha {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    #conteudo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (min-width: 523px) and (max-width: 767px) {
+    
+    #primeiroSabor,
+    #segundoSabor,
+    #cobertura,
+    #casquinha {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    #conteudo {
+        grid-template-columns: 1fr;
+    }
+    #container .saborSelecionado {
+        display: flex;
+        justify-content: space-between;
     }
 }
+
+@media screen and (min-width: 768px)  and (max-width: 1119px) {
+
+    #primeiroSabor,
+    #segundoSabor,
+    #cobertura,
+    #casquinha {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #container {
+        position: sticky;
+        top: 0;
+    }
+
+}
+@media screen and (min-width: 1120px) {
+    #primeiroSabor,
+    #segundoSabor,
+    #cobertura,
+    #casquinha {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #container {
+        position: sticky;
+        top: 0;
+    }
+
+    #container .saborSelecionado {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+    /* https://blog.cubos.academy/design-responsividade-css-101-breakpoints/# */

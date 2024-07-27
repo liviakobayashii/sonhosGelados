@@ -27,17 +27,25 @@ const mostrarSorvetesPersonalizados = () => {
 
     right.innerHTML = `
         <div id="container">
-            <h3>Sabor 1</h3>
-            <p>${sorvetePersonalizado.primeiroSabor ? sorvetePersonalizado.primeiroSabor.nome : "Sabor não selecionado"}<p>
+            <div class="saborSelecionado">
+                <h3>Sabor 1</h3>
+                <p>${sorvetePersonalizado.primeiroSabor ? sorvetePersonalizado.primeiroSabor.nome : "Sabor não selecionado"}</p>
+            </div>
 
-            <h3>Sabor 2</h3>
-            <p>${sorvetePersonalizado.segundoSabor ? sorvetePersonalizado.segundoSabor.nome : "Sabor não selecionado"}</p>
+            <div class="saborSelecionado">
+                <h3>Sabor 2</h3>
+                <p>${sorvetePersonalizado.segundoSabor ? sorvetePersonalizado.segundoSabor.nome : "Sabor não selecionado"}</p>
+            </div>
 
-            <h3>Cobertura</h3>
-            <p>${sorvetePersonalizado.cobertura ? sorvetePersonalizado.cobertura.nome : "Cobertura não selecionada"}</p>
+            <div class="saborSelecionado">
+                <h3>Cobertura</h3>
+                <p>${sorvetePersonalizado.cobertura ? sorvetePersonalizado.cobertura.nome : "Cobertura não selecionada"}</p>
+            </div>
 
-            <h3>Casquinha</h3>
-            <p>${sorvetePersonalizado.casquinha ? sorvetePersonalizado.casquinha.nome : "Casquinha não selecionada"}</p>
+            <div class="saborSelecionado">
+                <h3>Casquinha</h3>
+                <p>${sorvetePersonalizado.casquinha ? sorvetePersonalizado.casquinha.nome : "Casquinha não selecionada"}</p>
+            </div>
 
             <button type="submit" onclick="addCarrinhoPersonalizado()">Adicionar no carrinho</button>
         </div>
