@@ -37,6 +37,15 @@
                 <a href="./sistema/sorvete/view/addSorvete.html">Adicionar produto</a>
                 <a href="./sistema/carrinho/view/carrinho.html">Meu carrinho</a>
             </section>
+            <form id="formFiltrar">
+        
+                <input type="text" id="inputFiltrar" placeholder="Pesquise seu sorvete">
+                <button type="submit" id="search"><img src="./sistema/img/iconeSearch.png" alt="" srcset=""></button>
+        
+                <section id="sorvetesFiltrados">
+                    <!-- arquivo js -->
+                </section>
+            </form>
         </section>
 
         <div class="container header-content">
@@ -62,15 +71,6 @@
             </a>
         </section>
     
-        <form id="formFiltrar">
-
-            <input type="text" id="inputFiltrar" placeholder="Pesquise seu sorvete">
-            <input type="submit" value="Pesquisar">
-
-            <section id="sorvetesFiltrados">
-                <!-- arquivo js -->
-            </section>
-        </form>
 
         <h1>Nossos Sorvetes</h1>
         <section class="sorvetesAdicionados">
