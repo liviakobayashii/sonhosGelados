@@ -1,88 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sonhos Gelados</title>
-    <link rel="stylesheet" href="./sistema/css/style.css">
+    <link rel="stylesheet" href="./sistema/css/style.css" />
 
     <!-- importando fonte corpo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- importando fonte titulo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- icone coração -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <!-- icone carrinho -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <section id="navbar">
-            <div id="logo">
-                <img src="sistema/img/logo.jpg" alt="" srcset="">
-            </div>
-            <section id="desktop">
-                <a href="./sistema/sorvete/view/addSorvete.html">Adicionar produto</a>
-                <a href="./sistema/carrinho/view/carrinho.html">Meu carrinho</a>
-            </section>
-            <form id="formFiltrar">
-        
-                <input type="text" id="inputFiltrar" placeholder="Pesquise seu sorvete">
-                <button type="submit" id="search"><img src="./sistema/img/iconeSearch.png" alt="" srcset=""></button>
-        
-                <section id="sorvetesFiltrados">
-                    <!-- arquivo js -->
-                </section>
-            </form>
-        </section>
-
-        <div class="container header-content">
-            <div id="texto">
-                <h2>
-                    Personalize seu próprio <span id="sorvete">sorvete</span>
-                </h2>
-                <p>Escolha a casquinha e selecione os sabores das bolas de acordo com os sabores disponíveis</p>
-                <a href="sistema/personalizarSorvete/view/personalizar.html" id="personalizar">Personalizar</a>
-            </div>
-            <div id="imagem">
-                <img src="sistema/img/amora.png" alt="Sorvete de amora">
-            </div>
+      <section id="navbar">
+        <div id="logo">
+          <img src="sistema/img/logo.jpg" alt="" srcset="" />
         </div>
+        <section id="desktop">
+          <a href="./sistema/sorvete/view/addSorvete.html">Adicionar produto</a>
+          <a href="./sistema/carrinho/view/carrinho.html">Meu carrinho</a>
+        </section>
+        <form id="formFiltrarMobile">
+          <input
+            type="text"
+            class="inputFiltrar"
+            placeholder="Pesquise seu sorvete"
+          />
+          <button type="submit" id="search">
+            <img src="./sistema/img/iconeSearch.png" alt="" srcset="" />
+          </button>
+
+          <section class="sorvetesFiltrados">
+            <!-- arquivo js -->
+          </section>
+        </form>
+        <form id="formFiltrarDesktop">
+          <input
+            type="text"
+            class="inputFiltrar"
+            placeholder="Pesquise seu sorvete"
+          />
+          <button type="submit" id="search">
+            <img src="./sistema/img/iconeSearch.png" alt="" srcset="" />
+          </button>
+
+          <section class="sorvetesFiltrados">
+            <!-- arquivo js -->
+          </section>
+        </form>
+      </section>
+
+      <div class="container header-content">
+        <div id="texto">
+          <h2>Personalize seu próprio <span id="sorvete">sorvete</span></h2>
+          <p>
+            Escolha a casquinha e selecione os sabores das bolas de acordo com
+            os sabores disponíveis
+          </p>
+          <a
+            href="sistema/personalizarSorvete/view/personalizar.html"
+            id="personalizar"
+            >Personalizar</a
+          >
+        </div>
+        <div id="imagem">
+          <img src="sistema/img/amora.png" alt="Sorvete de amora" />
+        </div>
+      </div>
     </header>
     <main>
-        <section id="mobile">
-            <a href="./sistema/sorvete/view/addSorvete.html">
-                <div class="material-symbols-outlined">heart_plus</div>
-            </a>
-            <a href="./sistema/carrinho/view/carrinho.html">
-                <div class="material-symbols-outlined">shopping_cart</div>
-            </a>
-        </section>
-    
+      <section id="mobile">
+        <a href="./sistema/sorvete/view/addSorvete.html">
+          <div class="material-symbols-outlined">heart_plus</div>
+        </a>
+        <a href="./sistema/carrinho/view/carrinho.html">
+          <div class="material-symbols-outlined">shopping_cart</div>
+        </a>
+      </section>
 
-        <h1>Nossos Sorvetes</h1>
-        <section class="sorvetesAdicionados">
-            <!-- arquivo js -->
-        </section>
-    </main> 
+      <h1>Nossos Sorvetes</h1>
+      <section class="sorvetesAdicionados">
+        <!-- arquivo js -->
+      </section>
+    </main>
     <script src="./sistema/sorvete/controller/script.js"></script>
     <script src="./sistema/carrinho/controller/addCarrinho.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    
-    <footer>
-        ©Desenvolvido por Livia Martins, desenvolvedora Front-End
-    </footer>
-</body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <footer>©Desenvolvido por Livia Martins, desenvolvedora Front-End</footer>
+  </body>
 </html>
